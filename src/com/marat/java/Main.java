@@ -1,11 +1,11 @@
 package com.marat.java;
 
-import com.marat.java.strategy.Launcher;
+import com.marat.java.observer.ObserverTest;
 
 public class Main {
 
     public static void main(String[] args) {
-        Launcher launcher = new Launcher();
-        launcher.test();
+        Tester strategyTester = new ObserverTest();
+        strategyTester.test();
     }
 }
