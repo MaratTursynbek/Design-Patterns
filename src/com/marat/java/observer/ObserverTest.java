@@ -5,6 +5,8 @@ import com.marat.java.observer.custom.CurrentConditionsDisplayCustom;
 import com.marat.java.observer.custom.WeatherDataCustom;
 import com.marat.java.observer.observable.CurrentConditionsDisplayObservable;
 import com.marat.java.observer.observable.WeatherDataObservable;
+import com.marat.java.observer.pcl.CurrentConditionsDisplayPCL;
+import com.marat.java.observer.pcl.WeatherDataPCL;
 
 public class ObserverTest implements Tester {
 
@@ -23,5 +25,12 @@ public class ObserverTest implements Tester {
         weatherDataCustom.setMeasurements(80, 65, 30.4f);
         weatherDataCustom.setMeasurements(82, 70, 29.2f);
         weatherDataCustom.setMeasurements(78, 90, 29.2f);
+
+        // testing example created using PropertyChangeListener
+        WeatherDataPCL weatherDataPCL = new WeatherDataPCL();
+        CurrentConditionsDisplayPCL currentConditionsDisplayPCL = new CurrentConditionsDisplayPCL(weatherDataPCL);
+        weatherDataPCL.setMeasurements(80, 65, 30.4f);
+        weatherDataPCL.setMeasurements(82, 70, 29.2f);
+        weatherDataPCL.setMeasurements(78, 90, 29.2f);
     }
 }
