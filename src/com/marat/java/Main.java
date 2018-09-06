@@ -1,11 +1,11 @@
 package com.marat.java;
 
-import com.marat.java.observer.ObserverTest;
+import com.marat.java.decorator.DecoratorTester;
 
 public class Main {
 
     public static void main(String[] args) {
-        Tester strategyTester = new ObserverTest();
+        Tester strategyTester = new DecoratorTester();
         strategyTester.test();
     }
 }
